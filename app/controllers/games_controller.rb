@@ -8,8 +8,17 @@ class GamesController < ApplicationController
   end
 
   def number_method
-    @answer = 36
-    @guess = params["guess"].to_i
+    answer = 36
+    guess = params["guess"].to_i
+    if answer == guess
+      @message = "You won!"
+    elsif answer < guess
+      @message = "Guess Lower"
+    elsif answer > guess
+      @message = "Guess Higher"
+    else
+      @message = "Please enter a number."
+    end
     render "number_game.html.erb"
   end
 end
