@@ -22,7 +22,11 @@ class GamesController < ApplicationController
     render "number_game.html.erb"
   end
 
-  def guess_url_segment_method
+  def guess_form_method
+    render "guess_form.html.erb"
+  end
+
+  def guess_result_method
     answer = 36
     @guess = params["guess"].to_i
     if answer == @guess
@@ -34,6 +38,7 @@ class GamesController < ApplicationController
     else
       @message = "Please enter a number."
     end
-    render "guess_url_segment.html.erb"
+    render "guess_result.html.erb"
   end
+
 end

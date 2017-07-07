@@ -1,0 +1,9 @@
+<h1>Guessing Game!</h1>
+<%= form_tag "/guess_result", method: :post do%>
+  <div>
+    <h2>Please Submit Guess: <input type="text" name="guess"></h2>
+  </div>
+  <div>
+    <input type="submit" value="Place Your Guess!">
+  </div>
+<% end %>
