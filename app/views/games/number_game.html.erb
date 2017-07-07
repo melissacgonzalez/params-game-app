@@ -1,0 +1,10 @@
+<h1>Welcome to the Guessing Game!</h1>
+<% if @guess == @answer %>
+<h2>You won!</h2>
+<% elsif @guess > @answer %>
+<h2>Guess Lower</h2>
+<% elsif @guess < @answer %>
+<h2>Guess Higher</h2>
+<% else %>
+<h2>Please enter a number</h2>
+<%end%>
